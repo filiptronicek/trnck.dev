@@ -1,0 +1,79 @@
+.logo img {
+  border-radius: 50px;
+}
+
+mark#changingText {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.mainImg {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  width: 50vw;
+}
+
+.imgSubject {
+  position: absolute;
+  width: 50%;
+  left: calc(25vw - 5px);
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.mainImg:hover {
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+/*# sourceMappingURL=styles.css.map */

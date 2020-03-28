@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://andybrewer.github.io/mvp/mvp.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/index.js" defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="description" content="The official website of Filip Troníček">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Filip Troníček</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="./"><img alt="Filip Troníček" src="./assets/img/logo.png" height="70"></a>
+            <ul>
+                <li>Filip Troníček - home</li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="https://filiptronicek.github.io" target="_blank">Blog &nearr;</a></li>
+                <li><a href="https://www.github.com/filiptpronicek" target="_blank">GitHub &nearr;</a></li>
+            </ul>
+        </nav>
+        <h1>I am <u>Filip Troníček</u></h1>
+        <p>An aspiring <mark id="changingText">web developer</mark>.</p>
+        <br>
+      
+    </header>
+    <main>
+
+        <figure>
+            <center>
+                <div id="image">
+                    <img
+                      class="mainImg"
+                      src="./assets/img/heading.jpg"
+                      alt=""
+                      id="main"
+                    />
+                    <img
+                      src="./assets/img/IMG_4108-removebg-preview.png"
+                      alt=""
+                      class="imgSubject"
+                      onmouseover="document.getElementById('main').style.filter = 'blur(7px)'"
+                      onmouseout="document.getElementById('main').style.filter = 'blur(0px)'"
+                    />
+                  </div>
+                </center>
+            
+
+            <figcaption><i>Hi! That's me</i></figcaption>
+        </figure>
+        <hr>
+        <section>
+            <header>
+                <h2>Well, mr. teenager, what do you actually do?</h2>
+                <p>I do a lot of stuff, actually, but these are my best qualities</p>
+            </header>
+            <aside>
+                <img alt="An image of HTML, CSS and JavaScript" src="./assets/img/static-tech.svg" height="150">
+                <h3>HTML,CSS & JS</h3>
+                <p>I do a lot of websites. Simple or fancy ones. You name it.</p>
+            </aside>
+            <aside>
+                <img alt="Mobile friendly" src="./assets/img/server.svg" height="150">
+                <h3>Backend apps</h3>
+                <p>Developing backend apps with PHP or Node.js</p>
+            </aside>
+            <aside>
+                <img alt="MIT license" src="./assets/img/desktop.svg" height="150">
+                <h3>Desktop apps</h3>
+                <p>I also love developing apps in Python on the desktop! And even more fancy apps with Electron</p>
+            </aside>
+        </section>
+        <hr>
+        <section id="testimonials">
+            <blockquote>
+                <img alt="Quote" src="./assets/img/source-code.svg" height="80"><br>
+                "Why do I code? Because code rocks!"
+                <footer><i>- me, 2020</i></footer>
+            </blockquote>
+        </section>
+
+    </main>
+    <footer>
+        <hr>
+        <p>
+            Coded in 2020 with &lt;3 by Filip
+        </p>
+    </footer>
+</body>
+
+</html>
