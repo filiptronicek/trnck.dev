@@ -1,5 +1,7 @@
 $border_radius: 50px;
 
+@import './dark';
+
 .logo img{
     border-radius: $border_radius;
 }
