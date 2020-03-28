@@ -13,7 +13,9 @@ const names = [
   "data lover",
   "optimist",
   "blogger",
-  "team leader"
+  "team leader",
+  "memer",
+  "Redditor"
 ];
 
 function sleep(ms) {

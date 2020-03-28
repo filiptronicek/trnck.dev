@@ -93,4 +93,9 @@ mark#changingText {
     width: 100vw;
   }
 }
+
+.icon {
+  font-size: 3rem;
+  margin-right: 30px;
+}
 /*# sourceMappingURL=styles.css.map */
