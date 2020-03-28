@@ -64,7 +64,7 @@ mark#changingText {
 .imgSubject {
   position: absolute;
   width: 50%;
-  left: 25vw;
+  left: calc(25vw - 3px);
   transition-duration: 500ms;
 
 }

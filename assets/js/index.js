@@ -8,7 +8,12 @@ const names = [
   "GitHub addict",
   "reporter",
   "coder",
-  "sceptic"
+  "sceptic",
+  "editor",
+  "data lover",
+  "optimist",
+  "blogger",
+  "team leader"
 ];
 
 function sleep(ms) {
