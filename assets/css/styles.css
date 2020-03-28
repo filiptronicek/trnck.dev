@@ -81,11 +81,8 @@ mark#changingText {
   position: absolute;
   width: 50%;
   left: 25vw;
-}
-
-.mainImg:hover {
-  -webkit-transition-duration: filter 500ms;
-          transition-duration: filter 500ms;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 @media only screen and (max-device-width: 700px) {

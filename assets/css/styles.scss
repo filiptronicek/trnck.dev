@@ -65,9 +65,8 @@ mark#changingText {
   position: absolute;
   width: 50%;
   left: 25vw;
-}
-.mainImg:hover {
-  transition-duration: filter 500ms;
+  transition-duration: 500ms;
+
 }
 @media only screen and (max-device-width: 700px) {
     .imgSubject {
