@@ -85,16 +85,22 @@ mark#changingText {
           transition-duration: 500ms;
 }
 
-/*
 @media only screen and (max-device-width: 700px) {
-    .imgSubject {
-        display: none;
-    }
-    .mainImg {
-        width: 100vw;
-    }
+  .substImg {
+    display: block !important;
+    width: 100vw;
+  }
+  .mainImg {
+    display: none;
+  }
+  .imgSubject {
+    display: none;
+  }
+  .additionInfo {
+    display: none;
+  }
 }
-*/
+
 .icon {
   font-size: 3rem;
   margin-right: 30px;
