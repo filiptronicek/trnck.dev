@@ -17,7 +17,9 @@ const names = [
   "memer",
   "Redditor",
   "perfectionist",
-  "wannabe security expert"
+  "wannabe security expert",
+  "Firefox user",
+  "Apple enthusiast"
 ];
 
 function sleep(ms) {
