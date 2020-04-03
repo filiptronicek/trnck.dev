@@ -1,0 +1,15 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/index.html",
+      "headers" : [
+        {
+          "key" : "content-encoding",
+          "value" : "gzip"
+        }
+      ]
+    }
+  ]
+}
