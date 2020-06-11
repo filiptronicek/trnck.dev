@@ -5,6 +5,9 @@ $bg_color: #2a2a2e;
         color: #fff;
     }
     body > main:nth-child(2) > section:nth-child(3) aside {
-        box-shadow: none;
+        box-shadow: none !important;
+    }
+    #joke {
+        border: 3px solid rgb(58, 58, 58) !important;
     }
 }
