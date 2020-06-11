@@ -69,22 +69,22 @@ mark#changingText {
 }
 
 @media only screen and (max-device-width: 700px) {
-    .substImg {
-      display: block !important;
-        width: 100vw;
-    }
-    .mainImg {
-      display: none;
-    }
-    .imgSubject {
-      display: none;
-    }
-    .additionInfo {
-      display: none;
-    }
+  .substImg {
+    display: block !important;
+    width: 100vw;
+  }
+  .mainImg {
+    display: none;
+  }
+  .imgSubject {
+    display: none;
+  }
+  .additionInfo {
+    display: none;
+  }
 }
 
-.icon {
-    font-size: 3rem;
-    margin-right: 30px;
+i.fa {
+  margin-left: 10px;
+  margin-right: 10px;
 }

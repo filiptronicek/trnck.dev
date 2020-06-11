@@ -101,8 +101,8 @@ mark#changingText {
   }
 }
 
-.icon {
-  font-size: 3rem;
-  margin-right: 30px;
+i.fa {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
