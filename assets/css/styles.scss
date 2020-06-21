@@ -66,6 +66,7 @@ mark#changingText {
   width: 50%;
   left: calc(25vw - 3px);
   transition-duration: 500ms;
+  padding-top: .4rem;
 }
 
 @media only screen and (max-device-width: 700px) {
