@@ -66,7 +66,7 @@ mark#changingText {
   width: 50%;
   left: calc(25vw - 3px);
   transition-duration: 500ms;
-  padding-top: .4rem;
+  padding-top: 0.4rem;
 }
 
 @media only screen and (max-device-width: 700px) {
@@ -89,7 +89,7 @@ i.fa {
   margin-left: 10px;
   margin-right: 10px;
 }
-#certs iframe{
+#certs iframe {
   margin-right: 20px;
   margin-left: 20px;
 }
