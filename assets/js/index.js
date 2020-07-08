@@ -3,7 +3,7 @@ const rankDiv = document.getElementById("rank");
 const sponsorsDiv = document.getElementById("sponsors");
 
 const me = {
-  username: "filiptronicek"
+  username: "filiptronicek",
 };
 
 const names = [
@@ -25,11 +25,11 @@ const names = [
   "perfectionist",
   "wannabe security expert",
   "Firefox user",
-  "Apple enthusiast"
+  "Apple enthusiast",
 ];
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function changeText() {
@@ -62,23 +62,25 @@ function getRank() {
   const url = "https://commiters.now.sh/rank/czech_republic";
 
   fetch(url)
-  .then(response => response.json())
-  .then(res => {
-    for(const user of res.users) {
-      if(user.user.username === me.username) {
-        rankDiv.innerText = `${user.rank}${user.rank === 1 ? "st" : user.rank === 2 ? "nd" : "th"}`;
+    .then((response) => response.json())
+    .then((res) => {
+      for (const user of res.users) {
+        if (user.user.username === me.username) {
+          rankDiv.innerText = `${user.rank}${
+            user.rank === 1 ? "st" : user.rank === 2 ? "nd" : "th"
+          }`;
+        }
       }
-    }
-  });
+    });
 }
 function getSponsors() {
   const url = `https://sponsors.trnck.dev/${me.username}/count`;
   fetch(url)
-  .then(responce => responce.json())
-  .then(res => {
-    res = res.sponsors.count;
-    sponsorsDiv.innerText = `${res} sponsor${res == 1 ? '' : 's'}`;
-  });
+    .then((responce) => responce.json())
+    .then((res) => {
+      res = res.sponsors.count;
+      sponsorsDiv.innerText = `${res} sponsor${res == 1 ? "" : "s"}`;
+    });
 }
 getSponsors();
 getRank();
@@ -87,12 +89,12 @@ setTimeout(changeText, 1000);
 
 /* Smooth scrolling */
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 });
