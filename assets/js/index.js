@@ -59,7 +59,6 @@ function getRank() {
   fetch(url)
   .then(response => response.json())
   .then(res => {
-    console.table(res.users);
     for(const user of res.users) {
       if(user.user.username === "filiptronicek") {
         rankDiv.innerText = `${user.rank}${user.rank === 1 ? "st" : user.rank === 2 ? "nd" : "th"}`;
