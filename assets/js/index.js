@@ -1,5 +1,10 @@
 const changingEl = document.getElementById("changingText");
 const rankDiv = document.getElementById("rank");
+const sponsorsDiv = document.getElementById("sponsors");
+
+const me = {
+  username: "filiptronicek"
+};
 
 const names = [
   "student",
@@ -60,12 +65,19 @@ function getRank() {
   .then(response => response.json())
   .then(res => {
     for(const user of res.users) {
-      if(user.user.username === "filiptronicek") {
+      if(user.user.username === me.username) {
         rankDiv.innerText = `${user.rank}${user.rank === 1 ? "st" : user.rank === 2 ? "nd" : "th"}`;
       }
     }
   });
 }
+function getSponsors() {
+  const url = `https://sponsors.trnck.dev/${me.username}/count`;
+  fetch(url)
+  .then(responce => responce.text().sponsors.count)
+  .then(res => sponsorsDiv.innerText = `${res} sponsor${res == 1 ? '' : 's'}`);
+}
+getSponsors();
 getRank();
 
 setTimeout(changeText, 1000);
