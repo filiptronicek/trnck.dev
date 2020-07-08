@@ -36,7 +36,6 @@ async function changeText() {
       if (index > -1) {
         names.splice(index, 1);
       }
-      console.log(names);
       changingEl.innerText = "";
       for (let character of randomArray) {
         changingEl.innerText += character;
