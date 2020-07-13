@@ -64,8 +64,8 @@ function getRank() {
   fetch(url)
     .then((response) => response.json())
     .then((res) => {
-      for (const user of res.users) {
-        if (user.user.username === me.username) {
+      for (const user of res.users.users) {
+        if (user.login === me.username) {
           rankDiv.innerText = `${user.rank}${
             user.rank === 1 ? "st" : user.rank === 2 ? "nd" : "th"
           }`;
