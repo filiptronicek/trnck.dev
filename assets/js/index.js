@@ -1,4 +1,10 @@
 const changingEl = document.getElementById("changingText");
+const rankDiv = document.getElementById("rank");
+const sponsorsDiv = document.getElementById("sponsors");
+
+const me = {
+  username: "filiptronicek",
+};
 
 const names = [
   "student",
@@ -19,11 +25,11 @@ const names = [
   "perfectionist",
   "wannabe security expert",
   "Firefox user",
-  "Apple enthusiast"
+  "Apple enthusiast",
 ];
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function changeText() {
@@ -35,7 +41,6 @@ async function changeText() {
       if (index > -1) {
         names.splice(index, 1);
       }
-      console.log(names);
       changingEl.innerText = "";
       for (let character of randomArray) {
         changingEl.innerText += character;
@@ -53,17 +58,43 @@ async function changeText() {
 
   changeText();
 }
+function getRank() {
+  const url = "https://commiters.now.sh/rank/czech_republic";
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((res) => {
+      for (const user of res.users.users) {
+        if (user.login === me.username) {
+          rankDiv.innerText = `${user.rank}${
+            user.rank === 1 ? "st" : user.rank === 2 ? "nd" : "th"
+          }`;
+        }
+      }
+    });
+}
+function getSponsors() {
+  const url = `https://sponsors.trnck.dev/${me.username}/count`;
+  fetch(url)
+    .then((responce) => responce.json())
+    .then((res) => {
+      res = res.sponsors.count;
+      sponsorsDiv.innerText = `${res} sponsor${res == 1 ? "" : "s"}`;
+    });
+}
+getSponsors();
+getRank();
 
 setTimeout(changeText, 1000);
 
 /* Smooth scrolling */
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 });
