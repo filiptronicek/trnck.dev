@@ -93,3 +93,16 @@ i.fa {
   margin-right: 20px;
   margin-left: 20px;
 }
+.dark-img {
+  display: none;
+}
+.light-img {
+  display: inline;
+}
+.cert-name {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+}

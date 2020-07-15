@@ -14,6 +14,12 @@
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+  .dark-img {
+    display: inline !important;
+  }
+  .light-img {
+    display: none !important;
+  }
 }
 
 .logo img {
@@ -117,5 +123,21 @@ i.fa {
 #certs iframe {
   margin-right: 20px;
   margin-left: 20px;
+}
+
+.dark-img {
+  display: none;
+}
+
+.light-img {
+  display: inline;
+}
+
+.cert-name {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
