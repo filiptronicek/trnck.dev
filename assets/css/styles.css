@@ -139,5 +139,11 @@ i.fa {
   font-weight: bolder;
   text-align: center;
   width: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+section h2 {
+  font-size: 1.9rem;
 }
 /*# sourceMappingURL=styles.css.map */
