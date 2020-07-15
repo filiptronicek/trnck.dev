@@ -1,16 +1,22 @@
 $bg_color: #2a2a2e;
 @media (prefers-color-scheme: dark) {
-    body {
-        background: $bg_color;  
-        color: #fff;
-    }
-    body > main:nth-child(2) > section:nth-child(3) aside {
-        box-shadow: none !important;
-    }
-    #joke {
-        border: 3px solid rgb(58, 58, 58) !important;
-    }
-    section aside, section aside:hover {
-        box-shadow: none;
-    }
+  body {
+    background: $bg_color;
+    color: #fff;
+  }
+  body > main:nth-child(2) > section:nth-child(3) aside {
+    box-shadow: none !important;
+  }
+  #joke {
+    border: 3px solid rgb(58, 58, 58) !important;
+  }
+  section aside {
+    box-shadow: none;
+  }
+  .dark-img {
+    display: inline !important;
+  }
+  .light-img {
+    display: none !important;
+  }
 }

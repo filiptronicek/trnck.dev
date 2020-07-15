@@ -10,9 +10,15 @@
   #joke {
     border: 3px solid #3a3a3a !important;
   }
-  section aside, section aside:hover {
+  section aside {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .dark-img {
+    display: inline !important;
+  }
+  .light-img {
+    display: none !important;
   }
 }
 
@@ -117,5 +123,39 @@ i.fa {
 #certs iframe {
   margin-right: 20px;
   margin-left: 20px;
+}
+
+.dark-img {
+  display: none;
+}
+
+.light-img {
+  display: inline;
+}
+
+.cert-name {
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+section h2 {
+  font-size: 1.9rem;
+}
+
+section h3 {
+  font-size: 1.5rem;
+}
+
+#certs aside {
+  width: 200px;
+}
+
+#certs aside img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
