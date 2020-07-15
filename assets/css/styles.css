@@ -10,7 +10,7 @@
   #joke {
     border: 3px solid #3a3a3a !important;
   }
-  section aside, section aside:hover {
+  section aside {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -135,7 +135,7 @@ i.fa {
 
 .cert-name {
   display: inline-block;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bolder;
   text-align: center;
   width: 100%;
@@ -145,5 +145,9 @@ i.fa {
 
 section h2 {
   font-size: 1.9rem;
+}
+
+#certs aside {
+  width: 200px;
 }
 /*# sourceMappingURL=styles.css.map */
