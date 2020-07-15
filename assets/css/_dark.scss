@@ -10,7 +10,7 @@ $bg_color: #2a2a2e;
     #joke {
         border: 3px solid rgb(58, 58, 58) !important;
     }
-    section aside {
+    section aside, section aside:hover {
         box-shadow: none;
     }
 }
