@@ -77,7 +77,7 @@ class Analytics extends HTMLElement {
         s.parentNode.insertBefore(g, s);
       })();
     </script>
-  `
+  `;
   }
 }
 
