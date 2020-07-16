@@ -83,4 +83,4 @@ class Analytics extends HTMLElement {
 
 customElements.define("site-nav", Nav);
 customElements.define("site-footer", Foot);
-customElements.define("analytics", Analytics);
+customElements.define("site-analytics", Analytics);
