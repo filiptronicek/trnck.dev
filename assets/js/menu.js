@@ -1,12 +1,14 @@
 class Nav extends HTMLElement {
   connectedCallback() {
-      this.innerHTML = `
+    this.innerHTML = `
             <nav>
             <a class="logo" href="/"
                 ><img alt="Filip Troníček" src="./assets/img/logo.png" height="70"
             /></a>
                 <ul>
-                ${ window.location.pathname === "/" ? `
+                ${
+        window.location.pathname === "/"
+            ? `
                     <li>Filip Troníček - home</li>
                     <ul>
                     <li><a href="#intro">What do I do</a></li>
@@ -17,8 +19,11 @@ class Nav extends HTMLElement {
 
                     <li><a href="#certs">Certifications</a></li>
                     </ul>
-                    `: window.location.pathname === "/stats" || window.location.pathname === "/stats.html" ? `<li><a href="/">Filip Troníček - home</a></li>`
-                        : ""}
+                    `
+            : window.location.pathname === "/stats" ||
+                      window.location.pathname === "/stats.html"
+                  ? `<li><a href="/">Filip Troníček - home</a></li>`
+                  : ""}
                     <li>
                     <a rel="noreferrer" href="https://blog.trnck.dev">Blog</a>
                     </li>
@@ -35,7 +40,6 @@ class Nav extends HTMLElement {
                     </li>
             </nav>
       `;
-    
   }
 }
 
