@@ -43,5 +43,18 @@ class Nav extends HTMLElement {
       `;
   }
 }
+class Foot extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <footer>
+        <hr />
+          <p>
+            Coded in ${new Date().getFullYear()} with &lt;3 by Filip
+          </p>
+    </footer>
+    `;
+  }
+}
 
 customElements.define("site-nav", Nav);
+customElements.define("site-footer", Foot);
