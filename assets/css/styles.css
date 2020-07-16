@@ -20,6 +20,9 @@
   .light-img {
     display: none !important;
   }
+  .cert-name {
+    color: white;
+  }
 }
 
 .logo img {
@@ -140,7 +143,7 @@ i.fa {
   text-align: center;
   width: 100%;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 section h2 {
