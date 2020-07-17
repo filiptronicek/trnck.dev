@@ -56,31 +56,5 @@ class Foot extends HTMLElement {
   }
 }
 
-class Analytics extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
-      <script type="text/javascript">
-      var _paq = window._paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-      (function () {
-        var u = "//nfogix.com/";
-        _paq.push(["setTrackerUrl", u + "api/track"]);
-        _paq.push(["setSiteId", "00126087-c090-46f3-b6b1-de42ad3d44d1"]);
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0];
-        g.type = "text/javascript";
-        g.async = true;
-        g.defer = true;
-        g.src = u + "js/nfogix.min.js";
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
-  `;
-  }
-}
-
 customElements.define("site-nav", Nav);
 customElements.define("site-footer", Foot);
-customElements.define("site-analytics", Analytics);
