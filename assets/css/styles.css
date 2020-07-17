@@ -25,23 +25,20 @@
   }
 }
 
-.logo img {
-  border-radius: 50px;
-}
-
-mark#changingText {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em;
-  /* Adjust as needed */
-  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+@media only screen and (max-device-width: 700px) {
+  .substImg {
+    display: block !important;
+    width: 100vw;
+  }
+  .mainImg {
+    display: none;
+  }
+  .imgSubject {
+    display: none;
+  }
+  .additionInfo {
+    display: none;
+  }
 }
 
 /* The typing effect */
@@ -84,6 +81,25 @@ mark#changingText {
   }
 }
 
+.logo img {
+  border-radius: 50px;
+}
+
+mark#changingText {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
 .mainImg {
   position: relative;
   top: 0;
@@ -100,22 +116,6 @@ mark#changingText {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   padding-top: 0.4rem;
-}
-
-@media only screen and (max-device-width: 700px) {
-  .substImg {
-    display: block !important;
-    width: 100vw;
-  }
-  .mainImg {
-    display: none;
-  }
-  .imgSubject {
-    display: none;
-  }
-  .additionInfo {
-    display: none;
-  }
 }
 
 i.fa {

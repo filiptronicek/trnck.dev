@@ -1,0 +1,15 @@
+@media only screen and (max-device-width: 700px) {
+  .substImg {
+    display: block !important;
+    width: 100vw;
+  }
+  .mainImg {
+    display: none;
+  }
+  .imgSubject {
+    display: none;
+  }
+  .additionInfo {
+    display: none;
+  }
+}
