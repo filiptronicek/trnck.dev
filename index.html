@@ -9,6 +9,7 @@
     />
 
     <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/components.js" defer></script>
 
     <meta charset="utf-8" />
     <meta name="description" content="The official website of Filip Troníček" />
@@ -18,75 +19,20 @@
     />
 
     <!-- Preconnecting to resources -->
-    <link rel="preconnect" href="https://cdn.youracclaim.com" />
-    <link rel="preconnect" href="https://stats.youracclaim.com" />
-    <link rel="preconnect" href="https://images.youracclaim.com" />
-
     <link rel="preconnect" href="https://nfogix.com" />
 
     <link rel="preconnect" href="https://commiters.now.sh" />
     <link rel="preconnect" href="https://sponsors.trnck.dev" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <site-icons />
 
     <title>Filip Troníček</title>
 
-    <script type="text/javascript">
-      var _paq = window._paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-      (function () {
-        var u = "//nfogix.com/";
-        _paq.push(["setTrackerUrl", u + "api/track"]);
-        _paq.push(["setSiteId", "00126087-c090-46f3-b6b1-de42ad3d44d1"]);
-        var d = document,
-          g = d.createElement("script"),
-          s = d.getElementsByTagName("script")[0];
-        g.type = "text/javascript";
-        g.async = true;
-        g.defer = true;
-        g.src = u + "js/nfogix.min.js";
-        s.parentNode.insertBefore(g, s);
-      })();
-    </script>
   </head>
 
   <body>
     <header>
-      <nav>
-        <a class="logo" href="#"
-          ><img alt="Filip Troníček" src="./assets/img/logo.png" height="70"
-        /></a>
-        <ul>
-          <li>Filip Troníček - home</li>
-          <ul>
-            <li><a href="#intro">What do I do</a></li>
-
-            <li><a href="#portfolio">Portfolio</a></li>
-
-            <li><a href="#contact">Where to find me</a></li>
-
-            <li><a href="#certs">Certifications</a></li>
-          </ul>
-          <li>
-            <a rel="noreferrer" href="https://blog.trnck.dev">Blog</a>
-          </li>
-          <li>
-            <a rel="noreferrer" href="https://thanks.trnck.dev">Thanks page</a>
-          </li>
-          <li>
-            <a
-              rel="noreferrer"
-              href="https://www.github.com/filiptronicek"
-              target="_blank"
-              >GitHub &nearr;</a
-            >
-          </li>
-        </ul>
-      </nav>
+      <site-nav></site-nav>
       <h1>I am <u>Filip Troníček</u></h1>
       <p>An aspiring <mark id="changingText">web developer</mark>.</p>
       <br />
@@ -376,11 +322,6 @@
         </blockquote>
       </section>
     </main>
-    <footer>
-      <hr />
-      <p>
-        Coded in 2020 with &lt;3 by Filip
-      </p>
-    </footer>
+    <site-footer />
   </body>
 </html>
