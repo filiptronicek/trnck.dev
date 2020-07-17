@@ -39,6 +39,9 @@
   .additionInfo {
     display: none;
   }
+  .featured-img {
+    width: 90vw !important;
+  }
 }
 
 /* The typing effect */
