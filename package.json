@@ -1,0 +1,23 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "Website of Filip Troníček",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filiptronicek/trnck.dev.git"
+  },
+  "author": "Filip Troníček",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filiptronicek/trnck.dev/issues"
+  },
+  "homepage": "https://github.com/filiptronicek/trnck.dev#readme",
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}

@@ -3,3 +3,5 @@ assets/css/styles.css.map
 .vscode/settings.json
 
 .vercel
+
+node_modules    
