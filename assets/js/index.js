@@ -12,7 +12,6 @@ const names = [
   "web designer",
   "gamer",
   "GitHub addict",
-  "reporter",
   "coder",
   "sceptic",
   "editor",
@@ -20,12 +19,11 @@ const names = [
   "optimist",
   "blogger",
   "team leader",
-  "memer",
-  "Redditor",
   "perfectionist",
   "wannabe security expert",
   "Firefox user",
   "Apple enthusiast",
+  "Open Source lover"
 ];
 
 function sleep(ms) {
