@@ -23,7 +23,7 @@ const names = [
   "wannabe security expert",
   "Firefox user",
   "Apple enthusiast",
-  "Open Source lover"
+  "Open Source lover",
 ];
 
 function sleep(ms) {
