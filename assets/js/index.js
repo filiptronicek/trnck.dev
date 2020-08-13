@@ -76,8 +76,8 @@ function getSponsors() {
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
-      const count = res.sponsors.count;
-      sponsorsDiv.innerText = `${count} sponsor${count === 1 ? "" : "s"}`;
+      const respData = res.sponsors;
+      sponsorsDiv.innerText = `${respData.count} sponsor${respData.count === 1 ? "" : "s"}`;
     });
 }
 getSponsors();
