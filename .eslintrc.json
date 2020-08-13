@@ -16,6 +16,7 @@
         "no-console": "off",
         "no-await-in-loop": "off",
         "max-classes-per-file": "off",
-        "no-nested-ternary": "off"
+        "no-nested-ternary": "off",
+        "no-restricted-syntax": "off"
     }
 }

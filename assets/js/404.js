@@ -1,9 +1,9 @@
 const jokeDiv = document.getElementById("joke");
 
-function get_joke_of_the_day() {
+const getJokeOfTheDay = () => {
   const xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       jokeDiv.innerText = JSON.parse(this.responseText).setup;
       jokeDiv.innerHTML += `<br><span class="punchline">${
         JSON.parse(this.responseText).punchline
@@ -17,6 +17,6 @@ function get_joke_of_the_day() {
   );
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send();
-}
+};
 
-get_joke_of_the_day();
+getJokeOfTheDay();

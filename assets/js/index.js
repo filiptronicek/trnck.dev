@@ -1,3 +1,5 @@
+import names from "./nicks";
+
 const changingEl = document.getElementById("changingText");
 const rankDiv = document.getElementById("rank");
 const sponsorsDiv = document.getElementById("sponsors");
@@ -6,26 +8,6 @@ const commitSp = document.getElementById("commit");
 const me = {
   username: "filiptronicek",
 };
-
-const names = [
-  "student",
-  "web developer",
-  "web designer",
-  "gamer",
-  "GitHub addict",
-  "coder",
-  "sceptic",
-  "editor",
-  "data lover",
-  "optimist",
-  "blogger",
-  "team leader",
-  "perfectionist",
-  "wannabe security expert",
-  "Firefox user",
-  "Apple enthusiast",
-  "Open Source lover",
-];
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -41,13 +23,13 @@ async function changeText() {
         names.splice(index, 1);
       }
       changingEl.innerText = "";
-      for (let character of randomArray) {
+      for (const character of randomArray) {
         changingEl.innerText += character;
         await sleep(200);
       }
     } else {
       changingEl.innerText = "";
-      for (let character of "web developer") {
+      for (const character of "web developer") {
         changingEl.innerText += character;
         await sleep(200);
       }
@@ -103,7 +85,7 @@ setTimeout(changeText, 1000);
 /* Smooth scrolling */
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", (e) => {
     e.preventDefault();
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
