@@ -89,8 +89,7 @@ const getCommit = () => {
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
-      console.table(res);
-        commitSp.innerHTML = res[0].sha.substring(0, 7);
+        commitSp.innerHTML = `<a href="${res[0].html_url}" target="_blank" rel="noreferrer">${res[0].sha.substring(0, 7)}</a>`;
     });
 };
 getCommit();
