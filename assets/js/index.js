@@ -23,13 +23,13 @@ async function changeText() {
         names.splice(index, 1);
       }
       changingEl.innerText = "";
-      for (let character of randomArray) {
+      for (const character of randomArray) {
         changingEl.innerText += character;
         await sleep(200);
       }
     } else {
       changingEl.innerText = "";
-      for (let character of "web developer") {
+      for (const character of "web developer") {
         changingEl.innerText += character;
         await sleep(200);
       }
