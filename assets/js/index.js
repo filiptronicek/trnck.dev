@@ -90,7 +90,7 @@ const getCommit = () => {
     .then((responce) => responce.json())
     .then((res) => {
       console.table(res);
-        commitSp.innerHTML = res[0].sha.substring(0, 7);
+      commitSp.innerHTML = res[0].sha.substring(0, 7);
     });
 };
 getCommit();
