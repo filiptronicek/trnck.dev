@@ -1,6 +1,7 @@
 const changingEl = document.getElementById("changingText");
 const rankDiv = document.getElementById("rank");
 const sponsorsDiv = document.getElementById("sponsors");
+const commitSp = document.getElementById("commit");
 
 const me = {
   username: "filiptronicek",
@@ -76,10 +77,24 @@ function getSponsors() {
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
-      res = res.sponsors.count;
-      sponsorsDiv.innerText = `${res} sponsor${res == 1 ? "" : "s"}`;
+      const respData = res.sponsors;
+      sponsorsDiv.innerText = `${respData.count} sponsor${
+        respData.count === 1 ? "" : "s"
+      }`;
     });
 }
+
+const getCommit = () => {
+  const url = `http://localhost:3000/api/commit`;
+  fetch(url)
+    .then((responce) => responce.json())
+    .then((res) => {
+      commitSp.innerHTML = `<a href="${
+        res[0].html_url
+      }" target="_blank" rel="noreferrer">${res[0].sha.substring(0, 7)}</a>`;
+    });
+};
+getCommit();
 getSponsors();
 getRank();
 
