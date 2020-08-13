@@ -85,7 +85,7 @@ setTimeout(changeText, 1000);
 /* Smooth scrolling */
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", (e) => {
     e.preventDefault();
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
