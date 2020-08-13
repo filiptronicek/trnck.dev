@@ -48,9 +48,12 @@ class Foot extends HTMLElement {
     this.innerHTML = `
     <footer>
         <hr />
-          <p>
+          <span>
             Coded in ${new Date().getFullYear()} with &lt;3 by Filip
-          </p>
+          </span>
+          <span style="float: right">
+            Deployed from commit 
+          </span>
     </footer>
     `;
   }
