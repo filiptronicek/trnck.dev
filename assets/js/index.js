@@ -1,4 +1,4 @@
-import names from "./nicks";
+import names from "./nicks.js";
 
 const changingEl = document.getElementById("changingText");
 const rankDiv = document.getElementById("rank");
