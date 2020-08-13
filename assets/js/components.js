@@ -20,7 +20,7 @@ class Nav extends HTMLElement {
                     <li><a href="#certs">Certifications</a></li>
                     </ul>
                     `
-                    : window.location.pathname === "/stats" ||
+                    : window.location.pathname === "/stats" |
                       window.location.pathname === "/stats.html"
                     ? `<li><a href="/">Filip Troníček - home</a></li>`
                     : ""
