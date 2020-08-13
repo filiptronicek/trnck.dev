@@ -3,7 +3,7 @@ const rankDiv = document.getElementById("rank");
 const sponsorsDiv = document.getElementById("sponsors");
 
 const me = {
-  username: "filiptronicek",
+  username : "filiptronicek",
 };
 
 const names = [
@@ -26,9 +26,7 @@ const names = [
   "Open Source lover",
 ];
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
 
 async function changeText() {
   const randomText = names[Math.floor(Math.random() * names.length)];
@@ -59,26 +57,22 @@ async function changeText() {
 function getRank() {
   const url = "https://commiters.now.sh/rank/czech_republic";
 
-  fetch(url)
-    .then((response) => response.json())
-    .then((res) => {
-      for (const user of res.users.users) {
-        if (user.login === me.username) {
-          rankDiv.innerText = `${user.rank}${
-            user.rank === 1 ? "st" : user.rank === 2 ? "nd" : "th"
-          }`;
-        }
+  fetch(url).then((response) => response.json()).then((res) => {
+    for (const user of res.users.users) {
+      if (user.login === me.username) {
+        rankDiv.innerText = `${user.rank}${
+            user.rank === 1 ? "st" : user.rank === 2 ? "nd" : "th"}`;
       }
-    });
+    }
+  });
 }
 function getSponsors() {
   const url = `https://sponsors.trnck.dev/${me.username}/count`;
-  fetch(url)
-    .then((responce) => responce.json())
-    .then((res) => {
-      const respData = res.sponsors;
-      sponsorsDiv.innerText = `${respData.count} sponsor${respData.count === 1 ? "" : "s"}`;
-    });
+  fetch(url).then((responce) => responce.json()).then((res) => {
+    const respData = res.sponsors;
+    sponsorsDiv.innerText =
+        `${respData.count} sponsor${respData.count === 1 ? "" : "s"}`;
+  });
 }
 getSponsors();
 getRank();
@@ -88,11 +82,11 @@ setTimeout(changeText, 1000);
 /* Smooth scrolling */
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
+      behavior : "smooth",
     });
   });
 });
