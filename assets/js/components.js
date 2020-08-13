@@ -52,7 +52,7 @@ class Foot extends HTMLElement {
             Coded in ${new Date().getFullYear()} with &lt;3 by Filip
           </span>
           <span style="float: right">
-            Deployed from commit
+            Deployed from commit <span id="commit"> </span>
           </span>
     </footer>
     `;
