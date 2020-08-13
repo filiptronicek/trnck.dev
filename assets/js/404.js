@@ -19,4 +19,4 @@ function getJokeOfTheDay() {
   xhttp.send();
 }
 
-get_joke_of_the_day();
+getJokeOfTheDay();
