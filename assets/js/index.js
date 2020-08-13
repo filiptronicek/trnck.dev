@@ -85,7 +85,7 @@ function getSponsors() {
 }
 
 const getCommit = () => {
-  const url = `http://localhost:3000/api/commit`;
+  const url = `/api/commit`;
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
