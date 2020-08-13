@@ -1,6 +1,6 @@
 const jokeDiv = document.getElementById("joke");
 
-function getJokeOfTheDay() {
+const getJokeOfTheDay = () => {
   const xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
@@ -17,6 +17,6 @@ function getJokeOfTheDay() {
   );
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send();
-}
+};
 
 getJokeOfTheDay();
