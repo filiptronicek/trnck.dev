@@ -13,7 +13,7 @@ function getJokeOfTheDay() {
   xhttp.open(
     "GET",
     "https://cors-anywhere.herokuapp.com/official-joke-api.appspot.com/jokes/random",
-    true,
+    true
   );
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send();
