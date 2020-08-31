@@ -7,8 +7,7 @@ class Nav extends HTMLElement {
             /></a>
                 <ul>
                 ${
-                  window.location.pathname === "/"
-                    ? `
+                  window.location.pathname === "/" | window.location.pathname === "/index.html" ? `
                     <li>Filip Troníček - home</li>
                     <ul>
                     <li><a href="#intro">What do I do</a></li>
@@ -21,8 +20,7 @@ class Nav extends HTMLElement {
                     </ul>
                     `
                     : (window.location.pathname === "/stats") |
-                      (window.location.pathname === "/stats.html")
-                    ? `<li><a href="/">Filip Troníček - home</a></li>`
+                      (window.location.pathname === "/stats.html") ? `<li><a href="/">Filip Troníček - home</a></li>`
                     : ""
                 }
                     <li>
