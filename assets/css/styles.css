@@ -169,4 +169,8 @@ section h3 {
   max-width: 97vw;
   width: 45vw;
 }
+
+#facts aside {
+  cursor: pointer;
+}
 /*# sourceMappingURL=styles.css.map */
