@@ -92,7 +92,7 @@ const getCommit = () => {
 };
 
 const getBand = () => {
-  const url = `https://api-j03ifw8of.vercel.app/api/bandwith`;
+  const url = `https://api.trnck.dev/api/bandwith`;
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
