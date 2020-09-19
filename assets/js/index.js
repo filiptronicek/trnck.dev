@@ -100,10 +100,18 @@ const getBand = () => {
     });
 };
 
+const updateStuff = () => {
+  getSponsors();
+  getRank();
+  getBand();
+};
+
+updateStuff();
 getCommit();
-getSponsors();
-getRank();
-getBand();
+
+setInterval(() => {
+  updateStuff();
+}, 600000);
 
 setTimeout(changeText, 1000);
 
