@@ -4,6 +4,20 @@ const changingEl = document.getElementById("changingText");
 const rankDiv = document.getElementById("rank");
 const sponsorsDiv = document.getElementById("sponsors");
 const commitSp = document.getElementById("commit");
+const bandSp = document.getElementById("band");
+
+function formatBytes(bytes, decimals = 0) {
+  if (bytes === 0) return "0 Bytes";
+  const k = 1024;
+  const dm = decimals < 0 ? 0 : decimals;
+  const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
+}
+
+const vercel = [27721427, 7094694981];
+
+const sum = vercel.reduce((a, b) => a + b, 0);
 
 const me = {
   username: "filiptronicek",
@@ -76,9 +90,20 @@ const getCommit = () => {
       }" target="_blank" rel="noreferrer">${res[0].sha.substring(0, 7)}</a>`;
     });
 };
+
+const getBand = () => {
+  const url = `https://api-j03ifw8of.vercel.app/api/bandwith`;
+  fetch(url)
+    .then((responce) => responce.json())
+    .then((res) => {
+        bandSp.innerText = formatBytes(res.result.bytes + sum, 2);
+    });
+};
+
 getCommit();
 getSponsors();
 getRank();
+getBand();
 
 setTimeout(changeText, 1000);
 
