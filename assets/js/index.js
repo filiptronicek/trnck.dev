@@ -96,7 +96,7 @@ const getBand = () => {
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
-        bandSp.innerText = formatBytes(res.result.bytes + sum, 2);
+      bandSp.innerText = formatBytes(res.result.bytes + sum, 2);
     });
 };
 
