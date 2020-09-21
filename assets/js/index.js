@@ -15,7 +15,7 @@ function formatBytes(bytes, decimals = 0) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
 }
 
-const vercel = [27986140, 7132038955];
+const vercel = [28492477, 7138299665];
 
 const sum = vercel.reduce((a, b) => a + b, 0);
 
