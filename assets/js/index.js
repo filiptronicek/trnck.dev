@@ -92,7 +92,7 @@ const getCommit = () => {
 };
 
 const getBand = () => {
-  const url = `https://api.trnck.dev/api/bandwith`;
+  const url = `https://api.trnck.dev/bandwidth`;
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
