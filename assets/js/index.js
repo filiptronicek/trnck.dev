@@ -72,9 +72,9 @@ const getCommit = () => {
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
-      commitSp.innerHTML = `<a href="${
-        res[0].html_url
-      }" target="_blank" rel="noreferrer">${res[0].sha.substring(0, 7)}</a>`;
+      commitSp.innerHTML = `<a href="https://github.com/filiptronicek/trnck.dev/commit/${
+        res.data
+      }" target="_blank" rel="noreferrer">${res.data.substring(0, 7)}</a>`;
     });
 };
 
