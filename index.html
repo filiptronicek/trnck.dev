@@ -1,385 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://andybrewer.github.io/mvp/mvp.css">
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
 
-    <script type="module" src="assets/js/components.js" defer></script>
-    <script type="module" src="assets/js/index.js" defer></script>
+<head>
+  <link rel="stylesheet" href="https://andybrewer.github.io/mvp/mvp.css">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <meta charset="utf-8" />
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="I am Filip Troníček" />
-    <meta name="description" content="an open-source loving web developer" />
+  <script type="module" src="assets/js/components.js" defer></script>
+  <script type="module" src="assets/js/index.js" defer></script>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://trnck.dev/" />
-    <meta property="og:title" content="I am Filip Troníček" />
-    <meta
-      property="og:description"
-      content="an open-source loving web developer"
-    />
-    <meta
-      property="og:image"
-      content="https://trnck.dev/assets/img/heading.jpg"
-    />
+  <meta charset="utf-8" />
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="I am Filip Troníček" />
+  <meta name="description" content="an open-source loving web developer" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://trnck.dev/" />
-    <meta property="twitter:title" content="I am Filip Troníček" />
-    <meta
-      property="twitter:description"
-      content="an open-source loving web developer"
-    />
-    <meta
-      property="twitter:image"
-      content="https://trnck.dev/assets/img/heading.jpg"
-    />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://trnck.dev/" />
+  <meta property="og:title" content="I am Filip Troníček" />
+  <meta property="og:description" content="an open-source loving web developer" />
+  <meta property="og:image" content="https://trnck.dev/assets/img/heading.jpg" />
 
-    <meta
-      content="width=device-width, minimum-scale=1.0, maximum-scale=5.0, initial-scale=1.0"
-      name="viewport"
-    />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://trnck.dev/" />
+  <meta property="twitter:title" content="I am Filip Troníček" />
+  <meta property="twitter:description" content="an open-source loving web developer" />
+  <meta property="twitter:image" content="https://trnck.dev/assets/img/heading.jpg" />
 
-    <!-- Preconnecting to resources -->
-    <link rel="preconnect" href="https://nfogix.com" />
+  <meta content="width=device-width, minimum-scale=1.0, maximum-scale=5.0, initial-scale=1.0" name="viewport" />
 
-    <link rel="preconnect" href="https://commiters.now.sh" />
-    <link rel="preconnect" href="https://sponsors.trnck.dev" />
+  <!-- Preconnecting to resources -->
+  <link rel="preconnect" href="https://nfogix.com" />
 
-    <site-icons />
+  <link rel="preconnect" href="https://commiters.now.sh" />
+  <link rel="preconnect" href="https://sponsors.trnck.dev" />
 
-    <title>Filip Troníček</title>
+  <site-icons />
 
-    <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="filiptronicek" data-description="Support me on Buy me a coffee!" data-message="If you want to support me, buy me a cup of tea!" data-color="#FF5F5F" data-position="" data-x_margin="18" data-y_margin="18"></script>
-  </head>
+  <title>Filip Troníček</title>
 
-  <body>
-    <header>
-      <site-nav></site-nav>
-      <h1>I am <u>Filip Troníček</u></h1>
-      <p>An aspiring <mark id="changingText">web developer</mark>.</p>
-      <br />
-    </header>
-    <main>
-      <figure>
-        <center>
-          <div id="image">
-            <img
-              style="display: none"
-              class="substImg"
-              src="./assets/img/heading.jpg"
-              alt=""
-            />
-            <img
-              class="mainImg"
-              src="./assets/img/comp/heading.webp"
-              onerror="this.onerror=null; this.src='./assets/img/comp/heading.jpg'"
-              alt=""
-              id="main"
-            />
-            <img
-              src="./assets/img/comp/me-transparent.webp"
-              onerror="this.onerror=null; this.src='./assets/img/me-transparent.png'"
-              alt=""
-              class="imgSubject"
-              onmouseover="document.getElementById('main').style.filter = 'blur(7px)'"
-              onmouseout="document.getElementById('main').style.filter = 'blur(0px)'"
-            />
-          </div>
-        </center>
+  <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="filiptronicek"
+    data-description="Support me on Buy me a coffee!" data-message="If you want to support me, buy me a cup of tea!"
+    data-color="#FF5F5F" data-position="" data-x_margin="18" data-y_margin="18"></script>
+  <script>
+    function openInNewTab(href) {
+      Object.assign(document.createElement('a'), {
+        target: '_blank',
+        href: href,
+      }).click();
+    }
+  </script>
+</head>
 
-        <figcaption>
-          <i>Hi! That's me</i>
-          <span class="additionInfo"
-            >(from my
-            <a href="https://imageblur.now.sh/" rel="noreferrer" target="_blank"
-              >blur-on-hover</a
-            >
-            demo)</span
-          >
-        </figcaption>
-      </figure>
-      <hr />
-      <section id="intro">
+<body>
+  <header>
+    <site-nav></site-nav>
+    <h1>I am <u>Filip Troníček</u></h1>
+    <p>An aspiring <mark id="changingText">web developer</mark>.</p>
+    <br />
+  </header>
+  <main>
+    <figure>
+      <center>
+        <div id="image">
+          <img style="display: none" class="substImg" src="./assets/img/heading.jpg" alt="" />
+          <img class="mainImg" src="./assets/img/comp/heading.webp"
+            onerror="this.onerror=null; this.src='./assets/img/comp/heading.jpg'" alt="" id="main" />
+          <img src="./assets/img/comp/me-transparent.webp"
+            onerror="this.onerror=null; this.src='./assets/img/me-transparent.png'" alt="" class="imgSubject"
+            onmouseover="document.getElementById('main').style.filter = 'blur(7px)'"
+            onmouseout="document.getElementById('main').style.filter = 'blur(0px)'" />
+        </div>
+      </center>
+
+      <figcaption>
+        <i>Hi! That's me</i>
+        <span class="additionInfo">(from my
+          <a href="https://imageblur.now.sh/" rel="noreferrer" target="_blank">blur-on-hover</a>
+          demo)</span>
+      </figcaption>
+    </figure>
+    <hr />
+    <section id="intro">
+      <header>
+        <h2>Well, mr. teenager, what do you actually do?</h2>
+        <p>I do a lot of stuff, actually, but these are my best qualities</p>
+      </header>
+      <aside>
+        <img alt="An image of HTML, CSS and JavaScript" src="./assets/img/static-tech.svg" height="150" />
+        <h3>HTML, CSS & JS</h3>
+        <p>I do a lot of websites. Simple or fancy ones. You name it.</p>
+      </aside>
+      <aside>
+        <img alt="Server image" src="./assets/img/server.svg" height="150" />
+        <h3>Backend apps</h3>
+        <p>Developing backend apps with PHP, Node.js or Python</p>
+      </aside>
+      <aside>
+        <img alt="MIT license" src="./assets/img/desktop.svg" height="150" />
+        <h3>Desktop apps</h3>
+        <p>
+          I also love developing apps in Python on the desktop! And even more
+          fancy apps with Electron
+        </p>
+      </aside>
+    </section>
+    <hr />
+    <section id="portfolio">
+      <header>
+        <h2>Portfolio</h2>
+        <p>A short portfolio of my projects</p>
+      </header>
+      <aside>
+        <h3>Interclip</h3>
+        <p>A multi-platform clipboard sharing tool</p>
+        <a target="_blank" href="https://www.nodesagency.com/hacktoberfest2019-interclip/">Post by Nodes &nearr;</a>
+        <br />
+        <a target="_blank" href="https://github.com/aperta-principium/Interclip-desktop">Interclip desktop on GitHub
+          &nearr;</a>
+        <br />
+        <a target="_blank" href="http://uni.hys.cz" rel="noreferrer">Interclip web app &nearr;</a>
+      </aside>
+      <aside>
+        <h3>Coronavirus tracker</h3>
+        <p>A website for tracking the novel Coronavirus</p>
+        <a target="_blank" href="https://coronatime.now.sh/" rel="noreferrer">App link &nearr;</a>
+      </aside>
+      <aside>
+        <h3>A private real-time chatting app</h3>
+        <p>
+          A simple web-based chatting app written in JavaScript (Node.js)
+          using web sockets.
+        </p>
+        <a target="_blank" href="https://chat-private.herokuapp.com/" rel="noreferrer">App link &nearr;</a>
+        <br />
+        <a target="_blank" href="https://github.com/filiptronicek/Chat-app" rel="noreferrer">Source code on GitHub
+          &nearr;</a>
+      </aside>
+    </section>
+    <hr />
+    <section id="clientPortfolio">
+      <header>
+        <h2>Client portfolio</h2>
+        <p>A short portfolio of projects for clients</p>
+      </header>
+      <aside>
+        <h3>PHG Novinky</h3>
+        <p>A school news website</p>
+        <a rel="noreferrer" target="_blank" href="https://phgnovinky.cz/">Website &nearr;</a>
+      </aside>
+      <aside>
+        <h3>Neurologie Praha 6</h3>
+        <p>A neurology website</p>
+        <a rel="noreferrer" target="_blank" href="https://www.neurologiepraha6.cz/">Website &nearr;</a>
+      </aside>
+    </section>
+    <hr />
+    <section id="contact">
+      <header>
+        <h2>Where to find me</h2>
+        <img src="./assets/img/socials.svg" alt="" height="250" />
+      </header>
+      <a rel="noreferrer" href="https://www.linkedin.com/in/filiptronicek" target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a rel="noreferrer" href="https://twitter.com/filiptronicek" target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a rel="noreferrer" href="https://github.com/filiptronicek" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+      <a rel="noreferrer" href="mailto:filip@trnck.dev">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </section>
+    <hr />
+    <section id="certs">
+      <header>
+        <h2>Certifications</h2>
+      </header>
+      <section id="mta">
         <header>
-          <h2>Well, mr. teenager, what do you actually do?</h2>
-          <p>I do a lot of stuff, actually, but these are my best qualities</p>
+          <h3>Programming</h3>
         </header>
         <aside>
-          <img
-            alt="An image of HTML, CSS and JavaScript"
-            src="./assets/img/static-tech.svg"
-            height="150"
-          />
-          <h3>HTML, CSS & JS</h3>
-          <p>I do a lot of websites. Simple or fancy ones. You name it.</p>
-        </aside>
-        <aside>
-          <img alt="Server image" src="./assets/img/server.svg" height="150" />
-          <h3>Backend apps</h3>
-          <p>Developing backend apps with PHP, Node.js or Python</p>
-        </aside>
-        <aside>
-          <img alt="MIT license" src="./assets/img/desktop.svg" height="150" />
-          <h3>Desktop apps</h3>
-          <p>
-            I also love developing apps in Python on the desktop! And even more
-            fancy apps with Electron
-          </p>
-        </aside>
-      </section>
-      <hr />
-      <section id="portfolio">
-        <header>
-          <h2>Portfolio</h2>
-          <p>A short portfolio of my projects</p>
-        </header>
-        <aside>
-          <h3>Interclip</h3>
-          <p>A multi-platform clipboard sharing tool</p>
-          <a
-            target="_blank"
-            href="https://www.nodesagency.com/hacktoberfest2019-interclip/"
-            >Post by Nodes &nearr;</a
-          >
-          <br />
-          <a
-            target="_blank"
-            href="https://github.com/aperta-principium/Interclip-desktop"
-            >Interclip desktop on GitHub &nearr;</a
-          >
-          <br />
-          <a target="_blank" href="http://uni.hys.cz" rel="noreferrer"
-            >Interclip web app &nearr;</a
-          >
-        </aside>
-        <aside>
-          <h3>Coronavirus tracker</h3>
-          <p>A website for tracking the novel Coronavirus</p>
-          <a target="_blank" href="https://coronatime.now.sh/" rel="noreferrer"
-            >App link &nearr;</a
-          >
-        </aside>
-        <aside>
-          <h3>A private real-time chatting app</h3>
-          <p>
-            A simple web-based chatting app written in JavaScript (Node.js)
-            using web sockets.
-          </p>
-          <a
-            target="_blank"
-            href="https://chat-private.herokuapp.com/"
-            rel="noreferrer"
-            >App link &nearr;</a
-          >
-          <br />
-          <a
-            target="_blank"
-            href="https://github.com/filiptronicek/Chat-app"
-            rel="noreferrer"
-            >Source code on GitHub &nearr;</a
-          >
-        </aside>
-      </section>
-      <hr />
-      <section id="clientPortfolio">
-        <header>
-          <h2>Client portfolio</h2>
-          <p>A short portfolio of projects for clients</p>
-        </header>
-        <aside>
-          <h3>PHG Novinky</h3>
-          <p>A school news website</p>
-          <a rel="noreferrer" target="_blank" href="https://phgnovinky.cz/"
-            >Website &nearr;</a
-          >
-        </aside>
-        <aside>
-          <h3>Neurologie Praha 6</h3>
-          <p>A neurology website</p>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.neurologiepraha6.cz/"
-            >Website &nearr;</a
-          >
-        </aside>
-      </section>
-      <hr />
-      <section id="contact">
-        <header>
-          <h2>Where to find me</h2>
-          <img src="./assets/img/socials.svg" alt="" height="250" />
-        </header>
-        <a
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/filiptronicek"
-          target="_blank"
-        >
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a
-          rel="noreferrer"
-          href="https://twitter.com/filiptronicek"
-          target="_blank"
-        >
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a
-          rel="noreferrer"
-          href="https://github.com/filiptronicek"
-          target="_blank"
-        >
-          <i class="fa fa-github"></i>
-        </a>
-        <a rel="noreferrer" href="mailto:filip@trnck.dev">
-          <i class="fa fa-envelope"></i>
-        </a>
-      </section>
-      <hr />
-      <section id="certs">
-        <header>
-          <h2>Certifications</h2>
-        </header>
-        <section id="mta">
-          <header>
-            <h3>Programming</h3>
-          </header>
-          <aside>
-            <a
-              rel="noreferrer"
-              href="https://www.youracclaim.com/badges/6d5a4a58-c895-4d7e-a725-db1441e9d979/public_url"
-              target="_blank"
-            >
-              <picture class="light-img">
-                <source
-                  srcset="./assets/icons/alt/html_css_mta.avif"
-                  type="image/avif"
-                />
-                <img
-                  src="./assets/icons/html_css_mta.png"
-                  alt="MTA CSS and HTML"
-                  title="CSS and HTML"
-                />
-              </picture>
-              <picture class="dark-img">
-                <source
-                  srcset="./assets/icons/alt/html_css_mta_dark.avif"
-                  type="image/avif"
-                />
-                <img
-                  src="./assets/icons/html_css_mta_dark.png"
-                  alt="MTA CSS and HTML"
-                  title="CSS and HTML"
-                />
-              </picture>
-              <span class="cert-name">MTA 98-383 &nearr;</span>
-            </a>
-          </aside>
-          <aside>
-            <a
-              rel="noreferrer"
-              href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
-              target="_blank"
-            >
-            <picture>
-              <source
-                srcset="./assets/icons/alt/python_mta.avif"
-                type="image/avif"
-              />
-              <img
-                src="./assets/icons/python_mta.png"
-                alt="Python MTA Certificate"
-                title="Python MTA Certificate"
-              />
+          <a rel="noreferrer" href="https://www.youracclaim.com/badges/6d5a4a58-c895-4d7e-a725-db1441e9d979/public_url"
+            target="_blank">
+            <picture class="light-img">
+              <source srcset="./assets/icons/alt/html_css_mta.avif" type="image/avif" />
+              <img src="./assets/icons/html_css_mta.png" alt="MTA CSS and HTML" title="CSS and HTML" />
             </picture>
-              <span class="cert-name">MTA 98-381 &nearr;</span>
-            </a>
-          </aside>
-        </section>
-        <section id="mos">
-          <header>
-            <h3>Office</h3>
-          </header>
-          <aside>
-            <a
-              rel="noreferrer"
-              href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
-              target="_blank"
-            >
-              <picture>
-                <source
-                  srcset="./assets/icons/alt/ms2019.avif"
-                  type="image/avif"
-                />
-                <img
-                  src="./assets/icons/ms2019.png"
-                  alt="Microsoft Word 2019"
-                  title="Microsoft Word 2019"
-                />
-              </picture>
-              <span class="cert-name">MO-101 &nearr;</span>
-            </a>
-          </aside>
-          <aside>
-            <a
-              rel="noreferrer"
-              href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
-              target="_blank"
-            >
-              <picture>
-                <source
-                  srcset="./assets/icons/alt/excel2019.avif"
-                  type="image/avif"
-                />
-                <img
-                  src="./assets/icons/excel2019.png"
-                  alt="Excel 2019"
-                  title="Excel Expert 2019"
-                />
-              </picture>
-              <span class="cert-name">MOS 201 &nearr;</span>
-            </a>
-          </aside>
-        </section>
+            <picture class="dark-img">
+              <source srcset="./assets/icons/alt/html_css_mta_dark.avif" type="image/avif" />
+              <img src="./assets/icons/html_css_mta_dark.png" alt="MTA CSS and HTML" title="CSS and HTML" />
+            </picture>
+            <span class="cert-name">MTA 98-383 &nearr;</span>
+          </a>
+        </aside>
+        <aside>
+          <a rel="noreferrer" href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
+            target="_blank">
+            <picture>
+              <source srcset="./assets/icons/alt/python_mta.avif" type="image/avif" />
+              <img src="./assets/icons/python_mta.png" alt="Python MTA Certificate" title="Python MTA Certificate" />
+            </picture>
+            <span class="cert-name">MTA 98-381 &nearr;</span>
+          </a>
+        </aside>
       </section>
-      <hr />
-      <section id="facts">
+      <section id="mos">
         <header>
-          <h2>Some facts about me</h2>
+          <h3>Office</h3>
         </header>
-        <aside onClick="location.href='https://thanks.trnck.dev'">
-          I have <strong><span id="sponsors">...</span></strong> on GitHub
+        <aside>
+          <a rel="noreferrer" href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
+            target="_blank">
+            <picture>
+              <source srcset="./assets/icons/alt/ms2019.avif" type="image/avif" />
+              <img src="./assets/icons/ms2019.png" alt="Microsoft Word 2019" title="Microsoft Word 2019" />
+            </picture>
+            <span class="cert-name">MO-101 &nearr;</span>
+          </a>
         </aside>
-        <aside onClick="location.href='https://commits.top/czech_republic.html'">
-          I am the <strong><span id="rank">...</span></strong> most active
-          GitHub user in the Czech republic
-        </aside>
-        <aside onClick="location.href='https://api.trnck.dev/bandwidth'">
-          In the last month, I managed more than <strong><span id="band">...</span></strong> of the
-          world's internet bandwidth
+        <aside>
+          <a rel="noreferrer" href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
+            target="_blank">
+            <picture>
+              <source srcset="./assets/icons/alt/excel2019.avif" type="image/avif" />
+              <img src="./assets/icons/excel2019.png" alt="Excel 2019" title="Excel Expert 2019" />
+            </picture>
+            <span class="cert-name">MOS 201 &nearr;</span>
+          </a>
         </aside>
       </section>
-      <hr />
-      <section id="testimonials">
-        <blockquote>
-          <img
-            alt="Quote"
-            src="./assets/img/source-code.svg"
-            height="80"
-          /><br />
-          "Why do I code? Because code rocks!"
-          <footer><i>- me, 2020</i></footer>
-        </blockquote>
-      </section>
-    </main>
-    <site-footer />
-  </body>
+    </section>
+    <hr />
+    <section id="facts">
+      <header>
+        <h2>Some facts about me</h2>
+      </header>
+      <aside onClick="openInNewTab('https://thanks.trnck.dev')">
+        I have <strong><span id="sponsors">...</span></strong> on GitHub
+      </aside>
+      <aside onClick="openInNewTab('https://commits.top/czech_republic.html')">
+        I am the <strong><span id="rank">...</span></strong> most active
+        GitHub user in the Czech republic
+      </aside>
+      <aside onClick="location.href='openInNewTab(https://api.trnck.dev/bandwidth')">
+        In the last month, I managed more than <strong><span id="band">...</span></strong> of the
+        world's internet bandwidth
+      </aside>
+    </section>
+    <hr />
+    <section id="testimonials">
+      <blockquote>
+        <img alt="Quote" src="./assets/img/source-code.svg" height="80" /><br />
+        "Why do I code? Because code rocks!"
+        <footer><i>- me, 2020</i></footer>
+      </blockquote>
+    </section>
+  </main>
+  <site-footer />
+</body>
+
 </html>
