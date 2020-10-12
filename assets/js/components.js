@@ -24,10 +24,13 @@ class Nav extends HTMLElement {
                     : ""
                 }
                     <li>
-                    <a rel="noreferrer" href="https://blog.trnck.dev">Blog</a>
+                      <a rel="noreferrer" href="https://blog.trnck.dev">Blog</a>
                     </li>
                     <li>
-                    <a rel="noreferrer" href="https://thanks.trnck.dev">Thanks page</a>
+                      <a rel="noreferrer" href="https://thanks.trnck.dev">Thanks page</a>
+                    </li>
+                    <li>
+                      <a rel="noreferrer" href="https://status.trnck.dev">Status</a>
                     </li>
             </nav>
       `;
