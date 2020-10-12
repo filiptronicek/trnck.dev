@@ -29,14 +29,6 @@ class Nav extends HTMLElement {
                     <li>
                     <a rel="noreferrer" href="https://thanks.trnck.dev">Thanks page</a>
                     </li>
-                    <li>
-                    <a
-                        rel="noreferrer"
-                        href="https://www.github.com/filiptronicek"
-                        target="_blank"
-                        >GitHub &nearr;</a
-                    >
-                    </li>
             </nav>
       `;
   }
