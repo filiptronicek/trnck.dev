@@ -10,9 +10,9 @@ const me = {
   username: "filiptronicek",
 };
 
-function sleep(ms) {
+const sleep = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
-}
+};
 
 async function changeText() {
   const randomText = names[Math.floor(Math.random() * names.length)];
