@@ -1,9 +1,3 @@
-import fetch from "node-fetch";
-
 export default async (_req, res) => {
-  await fetch("https://api.github.com/repos/filiptronicek/trnck.dev/commits")
-    .then((data) => data.json())
-    .then((data) => {
-      res.send(data);
-    });
+  res.json({ data: process.env.VERCEL_GITHUB_COMMIT_SHA });
 };

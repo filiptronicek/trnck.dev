@@ -4,14 +4,15 @@ const changingEl = document.getElementById("changingText");
 const rankDiv = document.getElementById("rank");
 const sponsorsDiv = document.getElementById("sponsors");
 const commitSp = document.getElementById("commit");
+const bandSp = document.getElementById("band");
 
 const me = {
   username: "filiptronicek",
 };
 
-function sleep(ms) {
+const sleep = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
-}
+};
 
 async function changeText() {
   const randomText = names[Math.floor(Math.random() * names.length)];
@@ -71,14 +72,33 @@ const getCommit = () => {
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
-      commitSp.innerHTML = `<a href="${
-        res[0].html_url
-      }" target="_blank" rel="noreferrer">${res[0].sha.substring(0, 7)}</a>`;
+      commitSp.innerHTML = `<a href="https://github.com/filiptronicek/trnck.dev/commit/${
+        res.data
+      }" target="_blank" rel="noreferrer">${res.data.substring(0, 7)}</a>`;
     });
 };
+
+const getBand = () => {
+  const url = `https://api.trnck.dev/bandwidth`;
+  fetch(url)
+    .then((responce) => responce.json())
+    .then((res) => {
+      bandSp.innerText = res.result.humanReadable;
+    });
+};
+
+const updateStuff = () => {
+  getSponsors();
+  getRank();
+  getBand();
+};
+
+updateStuff();
 getCommit();
-getSponsors();
-getRank();
+
+setInterval(() => {
+  updateStuff();
+}, 600000);
 
 setTimeout(changeText, 1000);
 
