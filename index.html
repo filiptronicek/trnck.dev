@@ -9,6 +9,9 @@
   <script type="module" src="assets/js/components.js" defer></script>
   <script type="module" src="assets/js/index.js" defer></script>
 
+
+  <script src="https://unpkg.com/vanilla-tilt@1.7.0/lib/vanilla-tilt.js" defer></script>
+
   <meta charset="utf-8" />
   <!-- Primary Meta Tags -->
   <meta name="title" content="I am Filip Troníček" />
@@ -88,17 +91,17 @@
         <p>I do a lot of stuff, actually, but these are my best qualities</p>
         <a href="https://trnck.dev/0:/Docs/resume.pdf"><b>Download resume</b></a> <br />
       </header>
-      <aside>
+      <aside data-tilt>
         <img alt="An image of HTML, CSS and JavaScript" src="./assets/img/static-tech.svg" height="150" />
         <h3>HTML, CSS & JS</h3>
         <p>I do a lot of websites. Simple or fancy ones. You name it.</p>
       </aside>
-      <aside>
+      <aside data-tilt>
         <img alt="Server image" src="./assets/img/server.svg" height="150" />
         <h3>Backend apps</h3>
         <p>Developing backend apps with PHP, Node.js or Python</p>
       </aside>
-      <aside>
+      <aside data-tilt>
         <img alt="MIT license" src="./assets/img/desktop.svg" height="150" />
         <h3>Desktop apps</h3>
         <p>
@@ -113,7 +116,7 @@
         <h2>Portfolio</h2>
         <p>A short portfolio of my projects</p>
       </header>
-      <aside>
+      <aside data-tilt>
         <h3>Interclip</h3>
         <p>A multi-platform clipboard sharing tool</p>
         <a target="_blank" href="https://www.nodesagency.com/hacktoberfest2019-interclip/">Post by Nodes &nearr;</a>
@@ -123,12 +126,12 @@
         <br />
         <a target="_blank" href="https://link.mannoviny.cz" rel="noreferrer">Interclip web app &nearr;</a>
       </aside>
-      <aside>
+      <aside data-tilt>
         <h3>Coronavirus tracker</h3>
         <p>A website for tracking the novel Coronavirus</p>
         <a target="_blank" href="https://coronatime.now.sh/" rel="noreferrer">App link &nearr;</a>
       </aside>
-      <aside>
+      <aside data-tilt>
         <h3>A private real-time chatting app</h3>
         <p>
           A simple web-based chatting app written in JavaScript (Node.js)
@@ -146,14 +149,14 @@
         <h2>Client portfolio</h2>
         <p>A short portfolio of projects for clients</p>
       </header>
-      <aside>
+      <aside data-tilt>
         <h3>PHG Novinky</h3>
         <p>A school news website</p>
         <a rel="noreferrer" target="_blank" href="https://phgnovinky.cz/"
           >phgnovinky.cz &nearr;</a
         >
       </aside>
-      <aside>
+      <aside data-tilt>
         <h3>Neurologie Praha 6</h3>
         <p>A neurology website</p>
         <a
@@ -163,7 +166,7 @@
           >neurologiepraha6.cz &nearr;</a
         >
       </aside>
-      <aside>
+      <aside data-tilt>
         <h3>Irena Andrašková</h3>
         <p>A blog</p>
         <a
@@ -174,7 +177,7 @@
         >
       </aside>
       <!--
-      <aside>
+      <aside data-tilt>
         <h3>JoyTours</h3>
         <p>A company site</p>
         <a
@@ -185,7 +188,7 @@
         >
       </aside>
       -->
-      <aside>
+      <aside data-tilt>
         <h3>František Leták</h3>
         <p>A website of the academic painter František Leták</p>
         <a
@@ -195,7 +198,7 @@
           >frantisekletak.cz &nearr;</a
         >
       </aside>
-      <aside>
+      <aside data-tilt>
         <h3>PRAHA DUŠEVNÍ</h3>
         <p>A website of a group spreading awerness about mental disorders</p>
         <a
@@ -234,7 +237,7 @@
           <header>
             <h3>Programming</h3>
           </header>
-          <aside>
+          <aside data-tilt>
             <a rel="noreferrer" href="https://www.youracclaim.com/badges/6d5a4a58-c895-4d7e-a725-db1441e9d979/public_url"
               target="_blank">
               <picture class="light-img">
@@ -248,7 +251,7 @@
               <span class="cert-name">MTA 98-383 &nearr;</span>
             </a>
           </aside>
-          <aside>
+          <aside data-tilt>
             <a rel="noreferrer" href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
               target="_blank">
               <picture>
@@ -263,7 +266,7 @@
           <header>
             <h3>Office</h3>
           </header>
-          <aside>
+          <aside data-tilt>
             <a rel="noreferrer" href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
               target="_blank">
               <picture>
@@ -273,7 +276,7 @@
               <span class="cert-name">MO-101 &nearr;</span>
             </a>
           </aside>
-          <aside>
+          <aside data-tilt>
             <a rel="noreferrer" href="https://www.youracclaim.com/badges/46b260a8-ef2c-41a3-9f61-aa0920eab84a/public_url"
               target="_blank">
               <picture>
@@ -290,14 +293,14 @@
         <header>
           <h2>Some facts about me</h2>
         </header>
-        <aside onClick="openInNewTab('https://thanks.trnck.dev')">
+        <aside data-tilt onClick="openInNewTab('https://thanks.trnck.dev')">
           I have <strong><span id="sponsors">...</span></strong> on GitHub
         </aside>
-        <aside onClick="openInNewTab('https://commits.top/czech_republic.html')">
+        <aside data-tilt onClick="openInNewTab('https://commits.top/czech_republic.html')">
           I am the <strong><span id="rank">...</span></strong> most active
           GitHub user in the Czech republic
         </aside>
-        <aside onClick="openInNewTab('https://api.trnck.dev/bandwidth')">
+        <aside data-tilt onClick="openInNewTab('https://api.trnck.dev/bandwidth')">
           In the last month, I managed more than <strong><span id="band">...</span></strong> of the
           world's internet bandwidth
         </aside>
