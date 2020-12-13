@@ -3,8 +3,12 @@ class Nav extends HTMLElement {
   connectedCallback() {
 
     const logo = `<a class="logo" href="/">
-      <img alt="Filip Troníček" src="./assets/img/logo.png" height="70"/>
-    </a>`;
+    <picture >
+    <source srcset="./assets/img/logo.avif" type="image/avif" height="70" />
+    <img alt="Logo" src="./assets/img/logo.png" height="70" />
+  </picture>
+  </a>
+  `;
   
     this.innerHTML = `
             <nav>
