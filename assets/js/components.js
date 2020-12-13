@@ -1,10 +1,14 @@
 class Nav extends HTMLElement {
+
   connectedCallback() {
+
+    const logo = `<a class="logo" href="/">
+      <img alt="Filip Troníček" src="./assets/img/logo.png" height="70"/>
+    </a>`;
+  
     this.innerHTML = `
             <nav>
-            <a class="logo" href="/"
-                ><img alt="Filip Troníček" src="./assets/img/logo.png" height="70"
-            /></a>
+              ${logo}
                 <ul>
                 ${
                   window.location.pathname === "/" | window.location.pathname === "/index.html" ? `
