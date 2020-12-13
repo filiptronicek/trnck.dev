@@ -103,8 +103,8 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 if (!isMobile) {
   VanillaTilt.init(document.querySelectorAll("aside"), {
-    max: 25,
-    speed: 400
+    max: 10,
+    speed: 25
   });
 }
 
