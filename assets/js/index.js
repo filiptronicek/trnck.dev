@@ -6,6 +6,10 @@ const sponsorsDiv = document.getElementById("sponsors");
 const commitSp = document.getElementById("commit");
 const bandSp = document.getElementById("band");
 
+/* Defer font awesome icons */
+const fontAwesomeLink = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">`;
+document.querySelector("head").innerHTML += fontAwesomeLink;
+
 const me = {
   username: "filiptronicek",
 };
