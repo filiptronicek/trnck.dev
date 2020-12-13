@@ -40,6 +40,7 @@ async function changeText() {
 
   changeText();
 }
+
 function getRank() {
   const url = "https://commiters.now.sh/rank/czech_republic";
 
@@ -55,6 +56,7 @@ function getRank() {
       }
     });
 }
+
 function getSponsors() {
   const url = `https://sponsors.trnck.dev/${me.username}/count`;
   fetch(url)
