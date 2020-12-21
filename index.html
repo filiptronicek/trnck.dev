@@ -4,7 +4,9 @@
 <head>
   <link rel="stylesheet" href="https://andybrewer.github.io/mvp/mvp.css">
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
+
+  <script src="https://unpkg.com/vanilla-tilt@1.7.0/lib/vanilla-tilt.js" defer></script>
 
   <script type="module" src="assets/js/components.js" defer></script>
   <script type="module" src="assets/js/index.js" defer></script>
@@ -34,13 +36,18 @@
   <link rel="preconnect" href="https://commiters.now.sh" />
   <link rel="preconnect" href="https://sponsors.trnck.dev" />
 
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5333e45924824490b01c6a9b6b347894"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+
   <site-icons />
 
   <title>Filip Troníček</title>
 
   <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="filiptronicek"
     data-description="Support me on Buy me a coffee!" data-message="If you want to support me, buy me a cup of tea!"
-    data-color="#FF5F5F" data-position="" data-x_margin="18" data-y_margin="18"></script>
+    data-color="#FF5F5F" data-position="" data-x_margin="18" data-y_margin="18" defer></script>
+
   <script>
     function openInNewTab(href) {
       Object.assign(document.createElement('a'), {

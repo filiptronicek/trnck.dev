@@ -16,5 +16,9 @@ const names = [
   "Firefox user",
   "Apple enthusiast",
   "Open Source lover",
+  "React Native pursuer",
+  "Cloudflare user",
+  "server lover",
+  "person in the cloud",
 ];
 export default names;

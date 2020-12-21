@@ -6,6 +6,10 @@ const sponsorsDiv = document.getElementById("sponsors");
 const commitSp = document.getElementById("commit");
 const bandSp = document.getElementById("band");
 
+/* Defer font awesome icons */
+const fontAwesomeLink = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">`;
+document.querySelector("head").innerHTML += fontAwesomeLink;
+
 const me = {
   username: "filiptronicek",
 };
@@ -40,6 +44,7 @@ async function changeText() {
 
   changeText();
 }
+
 function getRank() {
   const url = "https://commiters.now.sh/rank/czech_republic";
 
@@ -55,6 +60,7 @@ function getRank() {
       }
     });
 }
+
 function getSponsors() {
   const url = `https://sponsors.trnck.dev/${me.username}/count`;
   fetch(url)
@@ -95,6 +101,16 @@ const updateStuff = () => {
 
 updateStuff();
 getCommit();
+
+
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (!isMobile) {
+  VanillaTilt.init(document.querySelectorAll("aside"), {
+    max: 10,
+    speed: 25
+  });
+}
 
 setInterval(() => {
   updateStuff();
