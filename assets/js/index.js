@@ -91,8 +91,12 @@ const getContributions = () => {
   fetch(url)
   .then((responce) => responce.json())
   .then((res) => {
+    let total = 0;
+    for (const day of res.contributions) {
+      total += day.count;
+    }
     contributionMessage.innerHTML = `
-      So far in ${year} I have made <strong>${res.years[0].total}</strong> contributions to Open Source
+      So far in ${year} I have made <strong>${res.years[0].total}</strong> contributions to Open Source (${total} in my lifetime)
     `;
   });
 };
