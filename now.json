@@ -5,6 +5,10 @@
       "dest": "/stats.html"
     },
     {
+      "src": "/portfolio",
+      "dest": "/portfolio.html"
+    },
+    {
       "handle": "filesystem"
     },
     {
