@@ -3,47 +3,53 @@
     background: #2a2a2e;
     color: #fff;
   }
+
   body > main:nth-child(2) > section:nth-child(3) aside {
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
   }
+
   #joke {
     border: 3px solid #3a3a3a !important;
   }
+
   section aside {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
+
   .dark-img {
     display: inline !important;
   }
+
   .light-img {
     display: none !important;
   }
+
   .cert-name {
     color: white !important;
   }
 }
-
-@media only screen and (max-device-width: 700px) {
+@media only screen and (max-device-width: 700px), (min-device-width: 2200px) {
   .substImg {
     display: block !important;
     width: 100vw;
   }
+
   .mainImg {
     display: none;
   }
+
   .imgSubject {
     display: none;
   }
+
   .additionInfo {
     display: none;
   }
+
   .featured-img {
     width: 90vw !important;
   }
 }
-
 /* The typing effect */
 @-webkit-keyframes typing {
   from {
@@ -53,7 +59,6 @@
     width: 100%;
   }
 }
-
 @keyframes typing {
   from {
     width: 0;
@@ -62,28 +67,23 @@
     width: 100%;
   }
 }
-
 /* The typewriter cursor effect */
 @-webkit-keyframes blink-caret {
-  from,
-  to {
+  from, to {
     border-color: transparent;
   }
   50% {
     border-color: orange;
   }
 }
-
 @keyframes blink-caret {
-  from,
-  to {
+  from, to {
     border-color: transparent;
   }
   50% {
     border-color: orange;
   }
 }
-
 .logo img {
   border-radius: 50px;
 }
@@ -107,8 +107,7 @@ mark#changingText {
   position: relative;
   top: 0;
   left: 0;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
   width: 50vw;
 }
 
@@ -116,8 +115,7 @@ mark#changingText {
   position: absolute;
   width: 50%;
   left: calc(25vw - 3px);
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
   padding-top: 0.4rem;
 }
 
@@ -172,5 +170,4 @@ section h3 {
 
 #facts aside {
   cursor: pointer;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
