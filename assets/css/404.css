@@ -3,28 +3,31 @@
     background: #2a2a2e;
     color: #fff;
   }
+
   body > main:nth-child(2) > section:nth-child(3) aside {
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
   }
+
   #joke {
     border: 3px solid #3a3a3a !important;
   }
+
   section aside {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
+
   .dark-img {
     display: inline !important;
   }
+
   .light-img {
     display: none !important;
   }
+
   .cert-name {
     color: white !important;
   }
 }
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   text-align: center;
@@ -54,5 +57,4 @@ pre {
     margin-right: auto;
     margin-left: auto;
   }
-}
-/*# sourceMappingURL=404.css.map */
+}/*# sourceMappingURL=404.css.map */
