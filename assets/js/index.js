@@ -5,6 +5,11 @@ const rankDiv = document.getElementById("rank");
 const sponsorsDiv = document.getElementById("sponsors");
 const commitSp = document.getElementById("commit");
 const bandSp = document.getElementById("band");
+const contributionMessage = document.getElementById("contribIntro");
+
+/* Defer font awesome icons */
+const fontAwesomeLink = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">`;
+document.querySelector("head").innerHTML += fontAwesomeLink;
 
 /* Defer font awesome icons */
 const fontAwesomeLink = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">`;
@@ -84,6 +89,22 @@ const getCommit = () => {
     });
 };
 
+const getContributions = () => {
+  const url = `/api/contribs?username=${me.username}`;
+  const year = new Date().getFullYear();
+  fetch(url)
+  .then((responce) => responce.json())
+  .then((res) => {
+    let total = 0;
+    for (const year of res.years) {
+      total += year.total;
+    }
+    contributionMessage.innerHTML = `
+      So far in ${year} I have made <strong>${res.years[0].total}</strong> contributions to Open Source (${total} in my lifetime)
+    `;
+  });
+};
+
 const getBand = () => {
   const url = `https://api.trnck.dev/bandwidth`;
   fetch(url)
@@ -96,7 +117,8 @@ const getBand = () => {
 const updateStuff = () => {
   getSponsors();
   getRank();
-  getBand();
+  //getBand();
+  getContributions();
 };
 
 updateStuff();
