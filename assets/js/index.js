@@ -86,14 +86,14 @@ const getCommit = () => {
 };
 
 const getContributions = () => {
-  const url = `https://cors-anywhere.herokuapp.com/https://github-contributions.now.sh/api/v1/${me.username}`;
+  const url = `/api/contribs?username=${me.username}`;
   const year = new Date().getFullYear();
   fetch(url)
   .then((responce) => responce.json())
   .then((res) => {
     let total = 0;
-    for (const day of res.contributions) {
-      total += day.count;
+    for (const year of res.years) {
+      total += year.total;
     }
     contributionMessage.innerHTML = `
       So far in ${year} I have made <strong>${res.years[0].total}</strong> contributions to Open Source (${total} in my lifetime)
