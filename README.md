@@ -4,6 +4,9 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/filiptronicek/trnck.dev/badge)](https://www.codefactor.io/repository/github/filiptronicek/trnck.dev)
 
+## Lightouse report
+![lighthouse results](https://files.catbox.moe/ronpy9.svg)
+
 ## Endpoints
 Some handy dandy URLs to visit on my site
 
