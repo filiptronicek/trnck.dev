@@ -60,17 +60,19 @@ class handler(BaseHTTPRequestHandler):
   def do_GET(self):
     query_components = parse_qs(urlparse(self.path).query).get('limit', 5)
     self.send_header('Content-type', 'text/plain')
-    self.end_headers()
     try:
         limit = int(query_components[0])
         if limit < 1:
             self.send_response(400)
+            self.end_headers()
             self.wfile.write("Negative decimal spaces? Really? You're better than that".encode()) 
         elif limit > 8000:
             self.send_response(400)
+            self.end_headers()
             self.wfile.write("Sorry, the server can't handle that amount of digits, try something lesser than 8000.".encode()) 
         else:
             self.send_response(200)
+            self.end_headers()
             self.wfile.write(main(limit).encode())
     except ValueError:
         self.send_response(400)
