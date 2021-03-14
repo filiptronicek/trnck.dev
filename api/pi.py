@@ -1,3 +1,6 @@
+from http.server import BaseHTTPRequestHandler
+from datetime import datetime
+
 def calcPi(limit):  # Generator function
     """
     Prints out the digits of PI
@@ -50,6 +53,11 @@ def main():  # Wrapper function
       txt += str(g)
     return txt
 
+class handler(BaseHTTPRequestHandler):
 
-if __name__ == '__main__':
-    main()
+  def do_GET(self):
+    self.send_response(200)
+    self.send_header('Content-type', 'text/plain')
+    self.end_headers()
+    self.wfile.write(main())
+    return
