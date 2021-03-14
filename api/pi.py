@@ -39,7 +39,7 @@ def calcPi(limit):  # Generator function
 def main():  # Wrapper function
 
     # Calls CalcPi with the given limit
-    return calcPi(8000)
+    return calcPi(80)
 
 from http.server import BaseHTTPRequestHandler
 
