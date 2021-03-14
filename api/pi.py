@@ -43,7 +43,7 @@ def calcPi(limit):  # Generator function
 def main(q):  # Wrapper function
 
     # Calls CalcPi with the given limit
-    pi_digits = calcPi(q["limit"])
+    pi_digits = calcPi(int(q["limit"]))
 
     # Prints the output of calcPi generator function
     digs = []
