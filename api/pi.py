@@ -1,6 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 from datetime import datetime
-from urlparse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs
 
 def calcPi(limit):  # Generator function
     """
