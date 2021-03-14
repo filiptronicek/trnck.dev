@@ -78,6 +78,8 @@ class handler(BaseHTTPRequestHandler):
             self.wfile.write(main(limit).encode())
     except ValueError:
         self.send_response(400)
+        self.send_header('Content-type', 'text/plain')
+        self.end_headers()
         self.wfile.write("This format doesn't look right, try to stick to integers.".encode()) 
 
     return
