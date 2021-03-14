@@ -43,7 +43,7 @@ def calcPi(limit):  # Generator function
 def main(q):  # Wrapper function
 
     # Calls CalcPi with the given limit
-    pi_digits = calcPi(int(q))
+    pi_digits = calcPi(int(q[0]))
 
     # Prints the output of calcPi generator function
     digs = []
@@ -61,5 +61,5 @@ class handler(BaseHTTPRequestHandler):
     self.send_response(200)
     self.send_header('Content-type', 'text/plain')
     self.end_headers()
-    self.wfile.write(str(query_components).encode())
+    self.wfile.write(main(query_components).encode())
     return
