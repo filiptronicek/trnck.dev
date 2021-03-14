@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 from datetime import datetime
+from urlparse import urlparse, parse_qs
 
 def calcPi(limit):  # Generator function
     """
@@ -39,10 +40,10 @@ def calcPi(limit):  # Generator function
             r = nr
 
 
-def main():  # Wrapper function
+def main(q):  # Wrapper function
 
     # Calls CalcPi with the given limit
-    pi_digits = calcPi(1000)
+    pi_digits = calcPi(q["limit"])
 
     # Prints the output of calcPi generator function
     digs = []
@@ -56,8 +57,9 @@ def main():  # Wrapper function
 class handler(BaseHTTPRequestHandler):
 
   def do_GET(self):
+    query_components = parse_qs(urlparse(self.path).query)
     self.send_response(200)
     self.send_header('Content-type', 'text/plain')
     self.end_headers()
-    self.wfile.write(main().encode())
+    self.wfile.write(main(query_components).encode())
     return
