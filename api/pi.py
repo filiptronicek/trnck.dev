@@ -63,7 +63,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(400)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write("Negative decimal spaces? Really? You're better then that".encode()) 
+        self.wfile.write("Negative decimal spaces? Really? You're better than that".encode()) 
     elif limit > 8000:
         self.send_response(400)
         self.send_header('Content-type', 'text/plain')
