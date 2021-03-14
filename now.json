@@ -1,29 +1,31 @@
 {
-  "routes": [
-    {
-      "src": "/stats",
-      "dest": "/stats.html"
-    },
-    {
-      "src": "/portfolio",
-      "dest": "/portfolio.html"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "status": 404,
-      "dest": "/404.html"
-    },
-    {
-      "src": "/(.*)",
-      "headers": {
-        "content-encoding": "gzip"
-      }
+    "routes": [
+        {
+            "src": "/stats",
+            "dest": "/stats.html"
+        },
+        {
+            "src": "/pi/(?<limit>[^/]*)/",
+            "dest": "/api/pi?limit=$limit"
+        },
+        {
+            "src": "/portfolio",
+            "dest": "/portfolio.html"
+        },
+        {
+            "handle": "filesystem"
+        }, {
+            "src": "/(.*)",
+            "status": 404,
+            "dest": "/404.html"
+        }, {
+            "src": "/(.*)",
+            "headers": {
+                "content-encoding": "gzip"
+            }
+        }
+    ],
+    "github": {
+        "silent": true
     }
-  ],
-  "github": {
-    "silent": true
-  }
 }
