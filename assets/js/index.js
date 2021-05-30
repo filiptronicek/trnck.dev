@@ -63,7 +63,7 @@ function getRank() {
 }
 
 function getSponsors() {
-  const url = `https://sponsors.trnck.dev/${me.username}/count`;
+  const url = `https://sponsors.trnck.dev/count/${me.username}/`;
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
