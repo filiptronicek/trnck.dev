@@ -85,7 +85,21 @@ export default function Home({}) {
               LinkedIn
             </ExternalLink>
           </li>
-          <li></li>
+          <li>
+            Portfolio:{" "}
+            <ExternalLink href="https://azurecup.cz">azurecup.cz</ExternalLink>,{" "}
+            <ExternalLink href="https://phgnovinky.cz/">
+              phgnovinky.cz
+            </ExternalLink>
+            ,{" "}
+            <ExternalLink href="https://www.andrasko.cz/">
+              andrasko.cz
+            </ExternalLink>
+            ,{" "}
+            <ExternalLink href="https://gardenemergency.cz/">
+              gardenemergency.cz
+            </ExternalLink>
+          </li>
         </ul>
       </section>
     </Layout>
