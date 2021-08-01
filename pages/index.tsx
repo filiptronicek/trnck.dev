@@ -40,30 +40,35 @@ export default function Home({ allPostsData }) {
             {` `}
           </li>
           <li>
-            Projects:{" "}
-            <ExternalLink href="https://interclip.app">Interclip</ExternalLink>, {" "}
-            <ExternalLink href="https://github.com/filiptronicek/gh-sponsors-api">GitHub Sponsors API</ExternalLink>, {" "}
-            <ExternalLink href="https://github.com/filiptronicek/btc-widget">BTC widget</ExternalLink>{" "} and <ExternalLink href="https://github.com/filiptronicek?tab=repositories&type=source">many more</ExternalLink>!
+            Projects of mine:{" "}
+            <ExternalLink href="https://interclip.app">Interclip</ExternalLink>,{" "}
+            <ExternalLink href="https://github.com/filiptronicek/gh-sponsors-api">
+              GitHub Sponsors API
+            </ExternalLink>
+            ,{" "}
+            <ExternalLink href="https://github.com/filiptronicek/btc-widget">
+              BTC widget
+            </ExternalLink>{" "}
+            and{" "}
+            <ExternalLink href="https://github.com/filiptronicek?tab=repositories&type=source">
+              many more
+            </ExternalLink>
+            !
+          </li>
+          <li>
+            Certifications: {" "}
+            <dfn title="Microsoft Technology Associate Python">MTA 98-381</dfn>, {" "}
+            <dfn title="Microsoft Technology Associate JavaScript">MTA 98-382</dfn>, {" "}
+            <dfn title="Microsoft Technology Associate CSS and HTML">MTA 98-383</dfn>, {" "}
+
+            <dfn title="Microsoft Azure Fundamentals">AZ-900</dfn>, {" "}
+            <dfn title="Microsoft 365 Fundamentals">MS-900</dfn>, {" "}
+
+            <dfn title="Microsoft Word Expert (Word and Word 2019)">MO-101</dfn>, {" "}
+            <dfn title="Microsoft Excel Expert (Word and Word 2019)">MO-201</dfn>
           </li>
           <li></li>
           <li></li>
-          <li></li>
-        </ul>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
         </ul>
       </section>
     </Layout>
