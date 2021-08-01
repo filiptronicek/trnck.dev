@@ -100,6 +100,16 @@ export default function Home({}) {
               gardenemergency.cz
             </ExternalLink>
           </li>
+          <li>
+            Links:{" "}
+            <ExternalLink href="https://thanks.trnck.dev">
+              thanks page
+            </ExternalLink>
+            , <ExternalLink href="https://blog.trnck.dev">blog</ExternalLink>,{" "}
+            <ExternalLink href="https://github.com/filiptronicek/trnck.dev">
+              repo
+            </ExternalLink>
+          </li>
         </ul>
       </section>
     </Layout>
