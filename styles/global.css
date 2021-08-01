@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+ul li {
+  margin-top: 1em;
+}
+
 @media (prefers-color-scheme: dark) {
+
   /* Dark mode colors */
   html {
     background-color: #1d1f21;
     color: white
   }
+
 }
