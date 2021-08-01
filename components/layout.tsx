@@ -4,6 +4,8 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
+import logo from "../public/images/logo.png";
+
 const name = "Filip Troníček";
 export const siteTitle = "Filip Troníček";
 
@@ -30,7 +32,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/logo.jpg"
+              src={logo}
               className={utilStyles.borderCircle}
               height={144}
               width={144}
