@@ -2,11 +2,9 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
 import ExternalLink from "../components/extLink";
 
-export default function Home({ allPostsData }) {
+export default function Home({}) {
   return (
     <Layout home>
       <Head>
@@ -56,18 +54,37 @@ export default function Home({ allPostsData }) {
             !
           </li>
           <li>
-            Certifications: {" "}
-            <dfn title="Microsoft Technology Associate Python">MTA 98-381</dfn>, {" "}
-            <dfn title="Microsoft Technology Associate JavaScript">MTA 98-382</dfn>, {" "}
-            <dfn title="Microsoft Technology Associate CSS and HTML">MTA 98-383</dfn>, {" "}
-
-            <dfn title="Microsoft Azure Fundamentals">AZ-900</dfn>, {" "}
-            <dfn title="Microsoft 365 Fundamentals">MS-900</dfn>, {" "}
-
-            <dfn title="Microsoft Word Expert (Word and Word 2019)">MO-101</dfn>, {" "}
-            <dfn title="Microsoft Excel Expert (Word and Word 2019)">MO-201</dfn>
+            Certifications:{" "}
+            <dfn title="Microsoft Technology Associate Python">MTA 98-381</dfn>,{" "}
+            <dfn title="Microsoft Technology Associate JavaScript">
+              MTA 98-382
+            </dfn>
+            ,{" "}
+            <dfn title="Microsoft Technology Associate CSS and HTML">
+              MTA 98-383
+            </dfn>
+            , <dfn title="Microsoft Azure Fundamentals">AZ-900</dfn>,{" "}
+            <dfn title="Microsoft 365 Fundamentals">MS-900</dfn>,{" "}
+            <dfn title="Microsoft Word Expert (Word and Word 2019)">MO-101</dfn>
+            ,{" "}
+            <dfn title="Microsoft Excel Expert (Word and Word 2019)">
+              MO-201
+            </dfn>
           </li>
-          <li></li>
+          <li>
+            Socials:{" "}
+            <ExternalLink href="https://github.com/filiptronicek">
+              GitHub
+            </ExternalLink>
+            ,{" "}
+            <ExternalLink href="https://twitter.com/filiptronicek">
+              Twitter
+            </ExternalLink>
+            ,{" "}
+            <ExternalLink href="https://www.linkedin.com/in/filiptronicek/">
+              LinkedIn
+            </ExternalLink>
+          </li>
           <li></li>
         </ul>
       </section>
