@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
+const name = "Filip Troníček";
+export const siteTitle = "Filip Troníček";
 
 export default function Layout({ children, home }) {
   return (
@@ -25,7 +25,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className={`${styles.header}`}>
         {home ? (
           <>
             <Image
@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={`dark:text-white text-5xl ${utilStyles.heading2Xl}`}>I am {name}</h1>
           </>
         ) : (
           <>
@@ -69,5 +69,5 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-  )
+  );
 }

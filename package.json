@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "trnck.dev",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,12 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^10.3.1",
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
     "next": "^11.0.0",
+    "postcss": "^8.3.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "remark": "^12.0.0",
-    "remark-html": "^12.0.0"
+    "remark-html": "^12.0.0",
+    "tailwindcss": "^2.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.10",
+    "@types/react": "^17.0.15",
+    "typescript": "^4.3.5"
   }
 }
