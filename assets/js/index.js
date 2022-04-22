@@ -63,7 +63,7 @@ function getRank() {
 }
 
 function getSponsors() {
-  const url = `https://sponsors.trnck.dev/count/${me.username}`;
+  const url = `https://ghs.vercel.app/count/${me.username}`;
   fetch(url)
     .then((responce) => responce.json())
     .then((res) => {
