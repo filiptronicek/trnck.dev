@@ -63,12 +63,13 @@ async function changeText() {
 }
 
 function getRank() {
-  const url = "https://commiters.now.sh/rank/czech_republic";
+  const country = "czech_republic";
+  const url = `https://commiters.vercel.app/api/v2?location=${country}`;
 
   fetch(url)
     .then((response) => response.json())
     .then((res) => {
-      for (const user of res.users.users) {
+      for (const user of res.result[country].users) {
         if (user.login === me.username) {
           rankDiv.innerText = formatOrdinals(user.rank)
         }
