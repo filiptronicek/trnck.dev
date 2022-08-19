@@ -79,7 +79,7 @@ function getRank() {
 function getSponsors() {
   const url = `https://ghs.vercel.app/count/${me.username}`;
   fetch(url)
-    .then((responce) => responce.json())
+    .then((response) => response.json())
     .then((res) => {
       const respData = res.sponsors;
       sponsorsDiv.innerText = `${respData.count} sponsor${
@@ -91,7 +91,7 @@ function getSponsors() {
 const getCommit = () => {
   const url = `/api/commit`;
   fetch(url)
-    .then((responce) => responce.json())
+    .then((response) => response.json())
     .then((res) => {
       commitSp.innerHTML = `<a href="https://github.com/filiptronicek/trnck.dev/commit/${
         res.data
@@ -103,7 +103,7 @@ const getContributions = () => {
   const url = `/api/contribs?username=${me.username}`;
   const year = new Date().getFullYear();
   fetch(url)
-  .then((responce) => responce.json())
+  .then((response) => response.json())
   .then((res) => {
     let total = 0;
     for (const year of res.years) {
@@ -118,7 +118,7 @@ const getContributions = () => {
 const getBand = () => {
   const url = `https://api.trnck.dev/bandwidth`;
   fetch(url)
-    .then((responce) => responce.json())
+    .then((response) => response.json())
     .then((res) => {
       bandSp.innerText = res.result.humanReadable;
     });
