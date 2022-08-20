@@ -11,22 +11,6 @@ const contributionMessage = document.getElementById("contribIntro");
 const fontAwesomeLink = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">`;
 document.querySelector("head").innerHTML += fontAwesomeLink;
 
-// "Borrowed" from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#using_options 
-
-const ordinalPluralRules = new Intl.PluralRules('en-US', { type: 'ordinal' });
-
-const ordinalSuffixes = new Map([
-  ['one',   'st'],
-  ['two',   'nd'],
-  ['few',   'rd'],
-  ['other', 'th'],
-]);
-const formatOrdinals = (number) => {
-  const rule = ordinalPluralRules.select(number);
-  const suffix = ordinalSuffixes.get(rule);
-  return `${number}${suffix}`;
-};
-
 const me = {
   username: "filiptronicek",
 };
@@ -64,16 +48,12 @@ async function changeText() {
 
 function getRank() {
   const country = "czech_republic";
-  const url = `https://commiters.vercel.app/api/v2?location=${country}`;
+  const url = `https://commiters.vercel.app/rank/${country}/${me.username}`;
 
   fetch(url)
     .then((response) => response.json())
-    .then((res) => {
-      for (const user of res.result[country].users) {
-        if (user.login === me.username) {
-          rankDiv.innerText = formatOrdinals(user.rank)
-        }
-      }
+    .then((data) => {
+      rankDiv.innerText = formatOrdinals(data.result.ordinalRank)
     });
 }
 
