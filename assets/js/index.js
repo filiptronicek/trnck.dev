@@ -53,7 +53,7 @@ function getRank() {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      rankDiv.innerText = formatOrdinals(data.result.ordinalRank)
+      rankDiv.innerText = data.result.ordinalRank;
     });
 }
 
